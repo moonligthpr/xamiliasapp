@@ -1,1 +1,35 @@
-i
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Increment and Decrement Example</title>
+</head>
+<body>
+    <h1>Number: <span id="number">0</span></h1>
+    <button id="plus">+</button>
+    <button id="minus">-</button>
+
+    <script>
+        // Get references to the HTML elements
+        var numberElement = document.getElementById('number');
+        var plusButton = document.getElementById('plus');
+        var minusButton = document.getElementById('minus');
+
+        // Initialize the number
+        var currentNumber = 0;
+        numberElement.textContent = currentNumber;
+
+        // Add a click event listener to the plus button
+        plusButton.addEventListener('click', function () {
+            currentNumber++;
+            numberElement.textContent = currentNumber;
+        });
+
+        // Add a click event listener to the minus button
+        minusButton.addEventListener('click', function () {
+            currentNumber--;
+            numberElement.textContent = currentNumber;
+        });
+    </script>
+</body>
+</html>
+
